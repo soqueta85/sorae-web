@@ -1,145 +1,303 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sorae | Professionelle Reinigungsdienste</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f7f7f7;
-            color: #333;
-        }
+  <title>Sorae | Professionelle Reinigungsdienste</title>
 
-        header {
-            background: white;
-            text-align: center;
-            padding: 60px 20px;
-        }
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-        h1 {
-            font-size: 48px;
-            margin-bottom: 10px;
-        }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f7f7f7;
+      color: #333;
+      line-height: 1.6;
+    }
 
-        .subtitle {
-            font-size: 22px;
-            color: #777;
-        }
+    header {
+      background: white;
+      text-align: center;
+      padding: 70px 20px 55px;
+      border-bottom: 1px solid #e5e5e5;
+    }
 
-        section {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 40px 20px;
-            background: white;
-            border-radius: 15px;
-        }
+    .logo {
+      font-size: 58px;
+      font-weight: 600;
+      letter-spacing: 4px;
+      color: #777;
+      margin-bottom: 12px;
+    }
 
-        h2 {
-            font-size: 32px;
-            margin-bottom: 25px;
-        }
+    .tagline {
+      font-size: 21px;
+      color: #999;
+      letter-spacing: 1px;
+    }
 
-        .services {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
-        }
+    .intro {
+      max-width: 850px;
+      margin: 45px auto 0;
+      padding: 0 20px;
+      text-align: center;
+      font-size: 18px;
+      color: #666;
+    }
 
-        .service {
-            padding: 25px;
-            border: 1px solid #ddd;
-            border-radius: 12px;
-            background: #fafafa;
-        }
+    section {
+      max-width: 1100px;
+      margin: 35px auto;
+      padding: 45px 30px;
+      background: white;
+      border-radius: 18px;
+    }
 
-        .service h3 {
-            margin-top: 0;
-        }
+    h2 {
+      text-align: center;
+      font-size: 32px;
+      font-weight: 500;
+      color: #555;
+      margin-bottom: 35px;
+    }
 
-        .contact {
-            text-align: center;
-        }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
 
-        .button {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 15px 30px;
-            background: #222;
-            color: white;
-            text-decoration: none;
-            border-radius: 8px;
-        }
+    .service {
+      padding: 28px 20px;
+      border: 1px solid #e6e6e6;
+      border-radius: 14px;
+      text-align: center;
+      background: #fafafa;
+      transition: 0.3s;
+    }
 
-        footer {
-            text-align: center;
-            padding: 30px;
-            color: #777;
-        }
-    </style>
+    .service:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    }
+
+    .service h3 {
+      color: #666;
+      font-size: 20px;
+      margin-bottom: 10px;
+      font-weight: 500;
+    }
+
+    .service p {
+      color: #888;
+      font-size: 15px;
+    }
+
+    .about {
+      text-align: center;
+      max-width: 800px;
+      margin: auto;
+      color: #666;
+      font-size: 17px;
+    }
+
+    .contact {
+      text-align: center;
+      background: #f1f1f1;
+    }
+
+    .contact p {
+      margin-bottom: 25px;
+      color: #666;
+      font-size: 17px;
+    }
+
+    .button {
+      display: inline-block;
+      padding: 14px 30px;
+      background: #666;
+      color: white;
+      text-decoration: none;
+      border-radius: 30px;
+      font-size: 16px;
+      transition: 0.3s;
+    }
+
+    .button:hover {
+      background: #444;
+    }
+
+    footer {
+      text-align: center;
+      padding: 35px 20px;
+      color: #999;
+      font-size: 14px;
+    }
+
+    @media (max-width: 800px) {
+      .services {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .logo {
+        font-size: 46px;
+      }
+    }
+
+    @media (max-width: 550px) {
+      .services {
+        grid-template-columns: 1fr;
+      }
+
+      header {
+        padding: 50px 20px;
+      }
+
+      .logo {
+        font-size: 40px;
+      }
+
+      .tagline {
+        font-size: 17px;
+      }
+
+      section {
+        margin: 20px 12px;
+        padding: 35px 20px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<header>
-    <h1>Sorae</h1>
-    <p class="subtitle">Professionelle Reinigungsdienste</p>
-</header>
+  <header>
+    <div class="logo">SORAE</div>
 
-<section>
+    <div class="tagline">
+      Professionelle Reinigungsdienste
+    </div>
+
+    <div class="intro">
+      Sauberkeit mit Anspruch – zuverlässig, gründlich und persönlich.
+      Professionelle Reinigung für Privathaushalte, Wohnungen und Büros.
+    </div>
+  </header>
+
+
+  <section>
     <h2>Unsere Dienstleistungen</h2>
 
     <div class="services">
 
-        <div class="service">
-            <h3>🏠 Haushaltsreinigung</h3>
-            <p>Gründliche und zuverlässige Reinigung von Häusern und Wohnungen.</p>
-        </div>
+      <div class="service">
+        <h3>Privathaushalte</h3>
+        <p>
+          Gründliche und zuverlässige Reinigung für Ihr Zuhause.
+        </p>
+      </div>
 
-        <div class="service">
-            <h3>🏢 Büroreinigung</h3>
-            <p>Professionelle Reinigung von Büros und Arbeitsräumen.</p>
-        </div>
+      <div class="service">
+        <h3>Wohnungen</h3>
+        <p>
+          Regelmäßige oder einmalige Reinigung für Wohnungen und Apartments.
+        </p>
+      </div>
 
-        <div class="service">
-            <h3>🪟 Fensterreinigung</h3>
-            <p>Saubere und streifenfreie Fenster für ein gepflegtes Zuhause.</p>
-        </div>
+      <div class="service">
+        <h3>Büroreinigung</h3>
+        <p>
+          Saubere und angenehme Arbeitsbereiche für Unternehmen.
+        </p>
+      </div>
 
-        <div class="service">
-            <h3>✨ Grundreinigung</h3>
-            <p>Intensive Reinigung für besonders gründliche Ergebnisse.</p>
-        </div>
+      <div class="service">
+        <h3>Grundreinigung</h3>
+        <p>
+          Intensive Reinigung für besonders gründliche Ergebnisse.
+        </p>
+      </div>
 
-        <div class="service">
-            <h3>🛏️ Bügelservice</h3>
-            <p>Sorgfältiges Bügeln und gepflegte Kleidung.</p>
-        </div>
+      <div class="service">
+        <h3>Fensterreinigung</h3>
+        <p>
+          Saubere Fenster und klare Sicht bis ins kleinste Detail.
+        </p>
+      </div>
 
-        <div class="service">
-            <h3>🧹 Umzugsreinigung</h3>
-            <p>Gründliche Reinigung vor oder nach dem Umzug.</p>
-        </div>
+      <div class="service">
+        <h3>Bügelservice</h3>
+        <p>
+          Sorgfältiges Bügeln und gepflegte Kleidung.
+        </p>
+      </div>
+
+      <div class="service">
+        <h3>Bettwäsche</h3>
+        <p>
+          Wechseln und sorgfältiges Vorbereiten der Bettwäsche.
+        </p>
+      </div>
+
+      <div class="service">
+        <h3>Individuelle Reinigung</h3>
+        <p>
+          Reinigungslösungen, die individuell an Ihre Bedürfnisse angepasst werden.
+        </p>
+      </div>
+
+      <div class="service">
+        <h3>Qualität & Zuverlässigkeit</h3>
+        <p>
+          Persönlicher Service, sorgfältige Arbeit und zuverlässige Termine.
+        </p>
+      </div>
 
     </div>
-</section>
+  </section>
 
-<section class="contact">
+
+  <section>
+    <h2>Über Sorae</h2>
+
+    <div class="about">
+      <p>
+        Sorae steht für professionelle Reinigung mit persönlicher Betreuung.
+        Wir legen großen Wert auf Sauberkeit, Zuverlässigkeit und sorgfältige Arbeit.
+      </p>
+
+      <br>
+
+      <p>
+        Unser Ziel ist es, Ihnen Zeit und Arbeit abzunehmen,
+        damit Sie sich in einer sauberen und gepflegten Umgebung wohlfühlen können.
+      </p>
+    </div>
+  </section>
+
+
+  <section class="contact">
     <h2>Kontakt</h2>
 
-    <p>Sie suchen eine zuverlässige Reinigungskraft?</p>
-    <p>Kontaktieren Sie uns gerne für weitere Informationen.</p>
+    <p>
+      Sie suchen eine zuverlässige Reinigungskraft?
+      Wir freuen uns auf Ihre Anfrage.
+    </p>
 
-    <a href="mailto:info@sorae.at" class="button">
-        Kontakt aufnehmen
+    <a class="button" href="mailto:kontakt@sorae.at">
+      Kontakt aufnehmen
     </a>
-</section>
+  </section>
 
-<footer>
+
+  <footer>
     © 2026 Sorae – Professionelle Reinigungsdienste
-</footer>
+  </footer>
 
 </body>
 </html>
