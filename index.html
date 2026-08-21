@@ -1,23 +1,145 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sorae | Professionelle Reinigungsdienste</title>
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #f7f7f7;
+            color: #333;
+        }
+
+        header {
+            background: white;
+            text-align: center;
+            padding: 60px 20px;
+        }
+
+        h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 22px;
+            color: #777;
+        }
+
+        section {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 40px 20px;
+            background: white;
+            border-radius: 15px;
+        }
+
+        h2 {
+            font-size: 32px;
+            margin-bottom: 25px;
+        }
+
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .service {
+            padding: 25px;
+            border: 1px solid #ddd;
+            border-radius: 12px;
+            background: #fafafa;
+        }
+
+        .service h3 {
+            margin-top: 0;
+        }
+
+        .contact {
+            text-align: center;
+        }
+
+        .button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 30px;
+            background: #222;
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #777;
+        }
+    </style>
 </head>
 
 <body>
 
+<header>
     <h1>Sorae</h1>
+    <p class="subtitle">Professionelle Reinigungsdienste</p>
+</header>
 
-    <p>Professionelle Reinigungsdienste</p>
-
+<section>
     <h2>Unsere Dienstleistungen</h2>
 
-    <p>
-        Reinigung von Häusern, Wohnungen und Büros,
-        Fensterreinigung, Bügelservice und gründliche Reinigung.
-    </p>
+    <div class="services">
+
+        <div class="service">
+            <h3>🏠 Haushaltsreinigung</h3>
+            <p>Gründliche und zuverlässige Reinigung von Häusern und Wohnungen.</p>
+        </div>
+
+        <div class="service">
+            <h3>🏢 Büroreinigung</h3>
+            <p>Professionelle Reinigung von Büros und Arbeitsräumen.</p>
+        </div>
+
+        <div class="service">
+            <h3>🪟 Fensterreinigung</h3>
+            <p>Saubere und streifenfreie Fenster für ein gepflegtes Zuhause.</p>
+        </div>
+
+        <div class="service">
+            <h3>✨ Grundreinigung</h3>
+            <p>Intensive Reinigung für besonders gründliche Ergebnisse.</p>
+        </div>
+
+        <div class="service">
+            <h3>🛏️ Bügelservice</h3>
+            <p>Sorgfältiges Bügeln und gepflegte Kleidung.</p>
+        </div>
+
+        <div class="service">
+            <h3>🧹 Umzugsreinigung</h3>
+            <p>Gründliche Reinigung vor oder nach dem Umzug.</p>
+        </div>
+
+    </div>
+</section>
+
+<section class="contact">
+    <h2>Kontakt</h2>
+
+    <p>Sie suchen eine zuverlässige Reinigungskraft?</p>
+    <p>Kontaktieren Sie uns gerne für weitere Informationen.</p>
+
+    <a href="mailto:info@sorae.at" class="button">
+        Kontakt aufnehmen
+    </a>
+</section>
+
+<footer>
+    © 2026 Sorae – Professionelle Reinigungsdienste
+</footer>
 
 </body>
 </html>
