@@ -1,1068 +1,1108 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>SORAE – Professionelle Reinigung</title>
-
-<meta name="description" content="SORAE – Professionelle und individuelle Reinigung mit Erfahrung, Sorgfalt und Liebe zum Detail.">
-
-<style>
-
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #ffffff;
-    color: #17324d;
-    line-height: 1.7;
-}
-
-a {
-    color: inherit;
-    text-decoration: none;
-}
-
-img {
-    max-width: 100%;
-    display: block;
-}
-
-/* =========================
-   HEADER
-========================= */
-
-header {
-    background: #ffffff;
-    border-bottom: 1px solid #e5edf3;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-}
-
-.header-inner {
-    max-width: 1200px;
-    margin: auto;
-    padding: 15px 25px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 30px;
-}
-
-.logo img {
-    width: 175px;
-    height: auto;
-}
-
-nav {
-    display: flex;
-    align-items: center;
-    gap: 25px;
-}
-
-nav a {
-    font-size: 15px;
-    font-weight: 600;
-    color: #17324d;
-    transition: 0.3s;
-}
-
-nav a:hover {
-    color: #4c8eb5;
-}
-
-/* =========================
-   HERO
-========================= */
-
-.hero {
-    background: linear-gradient(
-        135deg,
-        #f5fbff 0%,
-        #ffffff 100%
-    );
-    padding: 90px 25px;
-}
-
-.hero-inner {
-    max-width: 1100px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    align-items: center;
-    gap: 60px;
-}
-
-.hero h1 {
-    font-size: 48px;
-    line-height: 1.15;
-    margin-bottom: 25px;
-    color: #17324d;
-}
-
-.hero h1 span {
-    color: #4c8eb5;
-}
-
-.hero p {
-    font-size: 19px;
-    color: #526b7d;
-    margin-bottom: 30px;
-    max-width: 650px;
-}
-
-.hero-contact {
-    margin-top: 20px;
-    font-size: 17px;
-}
-
-.hero-contact p {
-    margin-bottom: 0;
-}
-
-.hero-contact a {
-    color: #4c8eb5;
-    font-weight: bold;
-}
-
-.hero-button {
-    display: inline-block;
-    background: #17324d;
-    color: #ffffff;
-    padding: 13px 25px;
-    border-radius: 6px;
-    font-weight: bold;
-    transition: 0.3s;
-}
-
-.hero-button:hover {
-    background: #4c8eb5;
-}
-
-.hero-logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.hero-logo img {
-    width: 250px;
-    max-width: 100%;
-}
-
-/* =========================
-   GENERAL SECTIONS
-========================= */
-
-section {
-    padding: 80px 25px;
-}
-
-.section-inner {
-    max-width: 1100px;
-    margin: auto;
-}
-
-.section-title {
-    text-align: center;
-    margin-bottom: 50px;
-}
-
-.section-title h2 {
-    font-size: 36px;
-    margin-bottom: 12px;
-    color: #17324d;
-}
-
-.section-title p {
-    color: #718595;
-    font-size: 17px;
-}
-
-/* =========================
-   DIENSTLEISTUNGEN
-========================= */
-
-.services {
-    background: #ffffff;
-}
-
-.services-text {
-    max-width: 850px;
-    margin: 0 auto 45px;
-    text-align: center;
-}
-
-.services-text h3 {
-    font-size: 25px;
-    margin-bottom: 15px;
-}
-
-.services-text p {
-    color: #5d7180;
-    margin-bottom: 15px;
-}
-
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 25px;
-}
-
-.service-card {
-    background: #f7fbfe;
-    border: 1px solid #e4eef4;
-    border-radius: 10px;
-    padding: 30px;
-    text-align: center;
-}
-
-.service-card h3 {
-    margin-bottom: 12px;
-    font-size: 21px;
-}
-
-.service-card p {
-    color: #637887;
-}
-
-/* =========================
-   ÜBER UNS
-========================= */
-
-.about {
-    background: #f7fbfe;
-}
-
-.about-content {
-    max-width: 850px;
-    margin: auto;
-}
-
-.about-content h3 {
-    font-size: 27px;
-    margin-bottom: 25px;
-    text-align: center;
-}
-
-.about-content p {
-    margin-bottom: 18px;
-    color: #526b7d;
-}
-
-.about-highlight {
-    margin-top: 30px;
-    padding: 25px;
-    border-left: 4px solid #4c8eb5;
-    background: #ffffff;
-    border-radius: 6px;
-    font-weight: 600;
-    color: #17324d;
-}
-
-/* =========================
-   GALERIE
-========================= */
-
-.gallery {
-    background: #ffffff;
-}
-
-.gallery-intro {
-    text-align: center;
-    max-width: 800px;
-    margin: -20px auto 45px;
-    color: #657988;
-}
-
-.gallery-job {
-    margin-bottom: 55px;
-}
-
-.gallery-job h3 {
-    text-align: center;
-    margin-bottom: 25px;
-    font-size: 24px;
-}
-
-.before-after {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 25px;
-}
-
-.photo-box {
-    position: relative;
-}
-
-.photo-box img {
-    width: 100%;
-    height: 360px;
-    object-fit: cover;
-    border-radius: 10px;
-    border: 1px solid #e1e9ee;
-}
-
-.photo-label {
-    text-align: center;
-    margin-top: 10px;
-    font-weight: bold;
-    font-size: 17px;
-}
-
-.gallery-note {
-    text-align: center;
-    margin-top: 35px;
-    color: #7a8c99;
-}
-
-/* =========================
-   KUNDENMEINUNGEN
-========================= */
-
-.reviews {
-    background: #f7fbfe;
-}
-
-.reviews-box {
-    max-width: 800px;
-    margin: auto;
-    text-align: center;
-    background: #ffffff;
-    padding: 40px 30px;
-    border-radius: 10px;
-    border: 1px solid #e3edf3;
-}
-
-.reviews-box p {
-    color: #5c7180;
-    font-size: 18px;
-    margin-bottom: 12px;
-}
-
-/* =========================
-   KONTAKT
-========================= */
-
-.contact {
-    background: #ffffff;
-}
-
-.contact-box {
-    max-width: 800px;
-    margin: auto;
-    text-align: center;
-    background: #f7fbfe;
-    padding: 45px 30px;
-    border-radius: 10px;
-}
-
-.contact-box h3 {
-    font-size: 28px;
-    margin-bottom: 15px;
-}
-
-.contact-box p {
-    color: #617684;
-    margin-bottom: 20px;
-}
-
-.contact-email {
-    display: inline-block;
-    color: #4c8eb5;
-    font-size: 20px;
-    font-weight: bold;
-    margin-bottom: 25px;
-}
-
-/* =========================
-   WEBSITE IM AUFBAU
-========================= */
-
-.construction {
-    background: #f7fbfe;
-    text-align: center;
-    padding: 55px 25px;
-}
-
-.construction h2 {
-    font-size: 28px;
-    margin-bottom: 10px;
-}
-
-.construction p {
-    color: #667b89;
-}
-
-/* =========================
-   FOOTER
-========================= */
-
-footer {
-    background: #17324d;
-    color: #ffffff;
-    text-align: center;
-    padding: 30px 20px;
-}
-
-footer p {
-    margin-bottom: 5px;
-}
-
-.footer-small {
-    font-size: 13px;
-    opacity: 0.8;
-}
-
-/* =========================
-   TABLET
-========================= */
-
-@media (max-width: 900px) {
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>SORAE – Professionelle Reinigungsdienste</title>
+
+  <meta name="description" content="SORAE – Professionelle Reinigungsdienste mit Erfahrung, Sorgfalt und Leidenschaft für Sauberkeit.">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      color: #17324d;
+      background: #ffffff;
+      line-height: 1.7;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1150px;
+      margin: 0 auto;
+    }
+
+    /* HEADER */
+
+    header {
+      background: #ffffff;
+      border-bottom: 1px solid #e5edf3;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
 
     .header-inner {
-        flex-direction: column;
-        gap: 15px;
+      min-height: 105px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+
+    .logo {
+      width: 175px;
+      height: auto;
     }
 
     nav {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-    }
-
-    .hero-inner {
-        grid-template-columns: 1fr;
-        text-align: center;
-    }
-
-    .hero p {
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .hero-logo {
-        order: -1;
-    }
-
-    .hero-logo img {
-        width: 210px;
-    }
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 600px) {
-
-    .header-inner {
-        padding: 12px 15px;
-    }
-
-    .logo img {
-        width: 150px;
-    }
-
-    nav {
-        gap: 10px 14px;
+      display: flex;
+      gap: 24px;
+      align-items: center;
+      flex-wrap: wrap;
     }
 
     nav a {
-        font-size: 13px;
+      color: #17324d;
+      font-size: 15px;
+      font-weight: 600;
+      transition: 0.2s;
     }
 
+    nav a:hover {
+      color: #2585b8;
+    }
+
+    .nav-contact {
+      background: #2585b8;
+      color: #ffffff !important;
+      padding: 10px 18px;
+      border-radius: 7px;
+    }
+
+    /* HERO */
+
     .hero {
-        padding: 60px 20px;
+      background: linear-gradient(135deg, #f4fbff, #ffffff);
+      padding: 75px 0 85px;
+      text-align: center;
+    }
+
+    .hero-logo {
+      width: 245px;
+      margin: 0 auto 25px;
     }
 
     .hero h1 {
-        font-size: 36px;
+      font-size: 44px;
+      line-height: 1.2;
+      color: #17324d;
+      margin-bottom: 20px;
     }
 
     .hero p {
-        font-size: 17px;
+      max-width: 720px;
+      margin: 0 auto 30px;
+      font-size: 19px;
+      color: #526b7d;
     }
 
-    .hero-logo img {
-        width: 180px;
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 14px;
+      flex-wrap: wrap;
     }
 
-    section {
-        padding: 60px 20px;
+    .button {
+      display: inline-block;
+      padding: 13px 24px;
+      border-radius: 7px;
+      font-weight: 700;
+      transition: 0.2s;
+    }
+
+    .button-primary {
+      background: #2585b8;
+      color: #ffffff;
+    }
+
+    .button-primary:hover {
+      background: #176e9d;
+    }
+
+    .button-secondary {
+      border: 2px solid #2585b8;
+      color: #2585b8;
+      background: #ffffff;
+    }
+
+    /* SECTIONS */
+
+    .section {
+      padding: 85px 0;
+    }
+
+    .section:nth-child(even) {
+      background: #f7fbfd;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 45px;
     }
 
     .section-title h2 {
-        font-size: 30px;
+      font-size: 34px;
+      color: #17324d;
+      margin-bottom: 12px;
     }
 
+    .section-title p {
+      max-width: 700px;
+      margin: auto;
+      color: #607587;
+    }
+
+    /* SERVICES */
+
     .services-grid {
-        grid-template-columns: 1fr;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
+    .service-card {
+      background: #ffffff;
+      border: 1px solid #e1ebf1;
+      border-radius: 12px;
+      padding: 28px 22px;
+      box-shadow: 0 6px 20px rgba(25, 70, 100, 0.06);
+    }
+
+    .service-card h3 {
+      color: #2585b8;
+      margin-bottom: 10px;
+      font-size: 20px;
+    }
+
+    .service-card p {
+      color: #607587;
+      font-size: 15px;
+    }
+
+    .services-text {
+      text-align: center;
+      max-width: 780px;
+      margin: 35px auto 0;
+      color: #526b7d;
+      font-size: 17px;
+    }
+
+    /* ABOUT */
+
+    .about {
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .about h2 {
+      text-align: center;
+      font-size: 34px;
+      margin-bottom: 35px;
+    }
+
+    .about p {
+      margin-bottom: 19px;
+      color: #526b7d;
+      font-size: 16px;
+    }
+
+    .about-intro {
+      text-align: center;
+      font-size: 20px !important;
+      color: #2585b8 !important;
+      font-weight: 600;
+      margin-bottom: 35px !important;
+    }
+
+    /* GALLERY */
+
+    .gallery-intro {
+      text-align: center;
+      max-width: 750px;
+      margin: -20px auto 40px;
+      color: #607587;
+    }
+
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 35px;
+    }
+
+    .gallery-card {
+      background: #ffffff;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid #e1ebf1;
+      box-shadow: 0 8px 25px rgba(25, 70, 100, 0.08);
+    }
+
+    .gallery-card h3 {
+      padding: 18px;
+      text-align: center;
+      color: #17324d;
     }
 
     .before-after {
-        grid-template-columns: 1fr;
-        gap: 30px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .photo-box {
+      position: relative;
     }
 
     .photo-box img {
-        height: 280px;
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
     }
 
-    .contact-box {
-        padding: 35px 20px;
+    .photo-label {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 8px;
+      text-align: center;
+      color: #ffffff;
+      background: rgba(23, 50, 77, 0.78);
+      font-weight: 700;
+    }
+
+    /* REVIEWS */
+
+    .reviews-section {
+      background: #f7fbfd;
+    }
+
+    .review-intro {
+      text-align: center;
+      max-width: 760px;
+      margin: -20px auto 35px;
+      color: #526b7d;
+    }
+
+    .review-button {
+      text-align: center;
+      margin-top: 35px;
+    }
+
+    /* CONTACT */
+
+    .contact-layout {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 45px;
+      align-items: start;
+    }
+
+    .contact-info {
+      background: #f4fafd;
+      border-radius: 14px;
+      padding: 35px;
+      border: 1px solid #e0edf4;
+    }
+
+    .contact-info h3 {
+      font-size: 25px;
+      margin-bottom: 18px;
+      color: #17324d;
+    }
+
+    .contact-info p {
+      margin-bottom: 16px;
+      color: #526b7d;
     }
 
     .contact-email {
-        font-size: 18px;
+      color: #2585b8;
+      font-weight: 700;
+      word-break: break-word;
     }
-}
 
-</style>
+    .contact-form {
+      background: #ffffff;
+      border: 1px solid #e1ebf1;
+      border-radius: 14px;
+      padding: 35px;
+      box-shadow: 0 8px 25px rgba(25, 70, 100, 0.07);
+    }
+
+    .form-group {
+      margin-bottom: 18px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 7px;
+      font-weight: 700;
+      color: #17324d;
+    }
+
+    .form-group input,
+    .form-group textarea,
+    .form-group select {
+      width: 100%;
+      padding: 13px 14px;
+      border: 1px solid #cbd9e2;
+      border-radius: 7px;
+      font-family: inherit;
+      font-size: 15px;
+      background: #ffffff;
+      color: #17324d;
+    }
+
+    .form-group textarea {
+      min-height: 150px;
+      resize: vertical;
+    }
+
+    .form-group input:focus,
+    .form-group textarea:focus,
+    .form-group select:focus {
+      outline: none;
+      border-color: #2585b8;
+      box-shadow: 0 0 0 3px rgba(37, 133, 184, 0.1);
+    }
+
+    .checkbox {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+      margin: 20px 0;
+      font-size: 13px;
+      color: #607587;
+    }
+
+    .checkbox input {
+      margin-top: 5px;
+      width: auto;
+    }
+
+    .submit-button {
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      font-size: 16px;
+    }
+
+    /* FOOTER */
+
+    footer {
+      background: #17324d;
+      color: #ffffff;
+      padding: 40px 0;
+      text-align: center;
+    }
+
+    footer img {
+      width: 130px;
+      margin: 0 auto 15px;
+      filter: brightness(0) invert(1);
+    }
+
+    footer p {
+      color: #d8e5ed;
+      font-size: 14px;
+      margin: 5px 0;
+    }
+
+    /* RESPONSIVE */
+
+    @media (max-width: 900px) {
+      .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .contact-layout {
+        grid-template-columns: 1fr;
+      }
+
+      nav {
+        gap: 14px;
+      }
+
+      .header-inner {
+        flex-direction: column;
+        padding: 18px 0;
+      }
+    }
+
+    @media (max-width: 650px) {
+      .container {
+        width: 92%;
+      }
+
+      .logo {
+        width: 150px;
+      }
+
+      .hero {
+        padding: 55px 0 65px;
+      }
+
+      .hero-logo {
+        width: 205px;
+      }
+
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      .hero p {
+        font-size: 17px;
+      }
+
+      .section {
+        padding: 60px 0;
+      }
+
+      .section-title h2,
+      .about h2 {
+        font-size: 29px;
+      }
+
+      nav {
+        justify-content: center;
+        font-size: 13px;
+      }
+
+      nav a {
+        font-size: 13px;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .photo-box img {
+        height: 230px;
+      }
+
+      .contact-info,
+      .contact-form {
+        padding: 25px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-<!-- =========================
-     HEADER / MENU
-========================= -->
+  <!-- HEADER -->
 
-<header>
+  <header>
+    <div class="container header-inner">
 
-    <div class="header-inner">
+      <a href="#start">
+        <img src="Logo.png" alt="SORAE Logo" class="logo">
+      </a>
 
-        <a href="#start" class="logo">
-            <img src="Logo.png" alt="SORAE Logo">
-        </a>
-
-        <nav>
-            <a href="#start">Startseite</a>
-            <a href="#dienstleistungen">Dienstleistungen</a>
-            <a href="#ueber-uns">Über uns</a>
-            <a href="#galerie">Galerie</a>
-            <a href="#meinungen">Kundenmeinungen</a>
-            <a href="#kontakt">Kontakt</a>
-        </nav>
+      <nav>
+        <a href="#start">Startseite</a>
+        <a href="#dienstleistungen">Dienstleistungen</a>
+        <a href="#ueber-uns">Über uns</a>
+        <a href="#galerie">Galerie</a>
+        <a href="#bewertungen">Kundenmeinungen</a>
+        <a href="#kontakt" class="nav-contact">Kontakt</a>
+      </nav>
 
     </div>
+  </header>
 
-</header>
 
+  <!-- HERO -->
 
-<!-- =========================
-     STARTSEITE
-========================= -->
+  <main>
 
-<section class="hero" id="start">
+    <section id="start" class="hero">
 
-    <div class="hero-inner">
+      <div class="container">
 
-        <div>
+        <img src="Logo.png" alt="SORAE" class="hero-logo">
 
-            <h1>
-                Professionelle Reinigung
-                <span>mit Liebe zum Detail.</span>
-            </h1>
+        <h1>Professionelle Reinigungsdienste</h1>
 
-            <p>
-                Sauberkeit, auf die Sie sich verlassen können –
-                sorgfältig, zuverlässig und individuell nach Ihren Wünschen.
-            </p>
+        <p>
+          Sauberkeit mit Erfahrung, Sorgfalt und echter Leidenschaft.
+          Persönlich, zuverlässig und professionell.
+        </p>
 
-            <a href="#kontakt" class="hero-button">
-                Kontakt aufnehmen
-            </a>
+        <div class="hero-buttons">
+          <a href="#kontakt" class="button button-primary">
+            Anfrage senden
+          </a>
 
-            <div class="hero-contact">
-
-                <p>
-                    📧
-                    <a href="mailto:info@sorae.at">
-                        info@sorae.at
-                    </a>
-                </p>
-
-            </div>
-
+          <a href="#dienstleistungen" class="button button-secondary">
+            Dienstleistungen
+          </a>
         </div>
 
+      </div>
 
-        <div class="hero-logo">
-
-            <img src="Logo.png" alt="SORAE">
-
-        </div>
-
-    </div>
-
-</section>
+    </section>
 
 
-<!-- =========================
-     DIENSTLEISTUNGEN
-========================= -->
+    <!-- DIENSTLEISTUNGEN -->
 
-<section class="services" id="dienstleistungen">
+    <section id="dienstleistungen" class="section">
 
-    <div class="section-inner">
+      <div class="container">
 
         <div class="section-title">
+          <h2>Dienstleistungen</h2>
 
-            <h2>Dienstleistungen</h2>
-
-            <p>
-                Reinigung ganz nach Ihrem Bedarf.
-            </p>
-
+          <p>
+            Jede Reinigung ist individuell.
+          </p>
         </div>
-
-
-        <div class="services-text">
-
-            <h3>Jede Reinigung ist individuell.</h3>
-
-            <p>
-                Ob regelmäßige Reinigung, einmalige Reinigung,
-                gründliche Reinigung oder eine besondere Anfrage –
-                bei SORAE sind alle Reinigungsanfragen willkommen.
-            </p>
-
-            <p>
-                Wir besprechen gemeinsam Ihre Wünsche und finden
-                die passende Lösung für Ihre Räumlichkeiten.
-            </p>
-
-            <p>
-                <strong>
-                    Kontaktieren Sie uns gerne für eine individuelle Anfrage.
-                </strong>
-            </p>
-
-        </div>
-
 
         <div class="services-grid">
 
-            <div class="service-card">
+          <div class="service-card">
+            <h3>Privathaushalte</h3>
+            <p>
+              Sorgfältige Reinigung und Pflege von Wohnungen und Häusern.
+            </p>
+          </div>
 
-                <h3>Privathaushalte</h3>
+          <div class="service-card">
+            <h3>Büroreinigung</h3>
+            <p>
+              Saubere und angenehme Arbeitsräume für Unternehmen und Büros.
+            </p>
+          </div>
 
-                <p>
-                    Sorgfältige Reinigung und Pflege von Wohnungen
-                    und Häusern – regelmäßig oder nach Bedarf.
-                </p>
+          <div class="service-card">
+            <h3>Grundreinigung</h3>
+            <p>
+              Gründliche Reinigung für besonders intensive Verschmutzungen.
+            </p>
+          </div>
 
-            </div>
-
-
-            <div class="service-card">
-
-                <h3>Büroreinigung</h3>
-
-                <p>
-                    Professionelle Reinigung von Büros und
-                    Arbeitsbereichen für ein gepflegtes Umfeld.
-                </p>
-
-            </div>
-
-
-            <div class="service-card">
-
-                <h3>Grundreinigung</h3>
-
-                <p>
-                    Gründliche Reinigung bei stärkerer oder
-                    länger angesammelter Verschmutzung.
-                </p>
-
-            </div>
-
-
-            <div class="service-card">
-
-                <h3>Spezielle Reinigungen</h3>
-
-                <p>
-                    Auch besondere Anforderungen, empfindliche
-                    Oberflächen und schwierige Verschmutzungen
-                    werden individuell besprochen.
-                </p>
-
-            </div>
+          <div class="service-card">
+            <h3>Spezielle Reinigung</h3>
+            <p>
+              Individuelle Lösungen für besondere Anforderungen und Oberflächen.
+            </p>
+          </div>
 
         </div>
 
-    </div>
+        <p class="services-text">
+          Ob regelmäßige Reinigung, einmalige Reinigung, gründliche Reinigung
+          oder eine besondere Anfrage – bei SORAE sind alle
+          Reinigungsanfragen willkommen.
+          <br><br>
+          Wir besprechen gemeinsam Ihre Wünsche und finden die passende Lösung
+          für Ihre Räumlichkeiten.
+          <br><br>
+          <strong>Kontaktieren Sie uns gerne für eine individuelle Anfrage.</strong>
+        </p>
 
-</section>
+      </div>
+
+    </section>
 
 
-<!-- =========================
-     ÜBER UNS
-========================= -->
+    <!-- ÜBER UNS -->
 
-<section class="about" id="ueber-uns">
+    <section id="ueber-uns" class="section">
 
-    <div class="section-inner">
+      <div class="container">
+
+        <div class="about">
+
+          <h2>Über uns – Unsere Geschichte</h2>
+
+          <p class="about-intro">
+            Mit Erfahrung, Ausbildung und echter Leidenschaft für Sauberkeit.
+          </p>
+
+          <p>
+            Meine berufliche Erfahrung im Bereich Reinigung begann in Portugal.
+            Dort arbeitete ich sowohl in der professionellen Reinigung als auch
+            im Hotelgewerbe und durfte wertvolle Erfahrungen in 5-Sterne-Hotels sammeln.
+          </p>
+
+          <p>
+            Während dieser Zeit konnte ich verschiedene fachliche Schulungen
+            absolvieren und umfangreiche Erfahrungen in der professionellen
+            Reinigung sammeln. Dabei habe ich gelernt, wie wichtig gründliches,
+            sorgfältiges und verantwortungsbewusstes Arbeiten ist.
+          </p>
+
+          <p>
+            Ich habe auch Erfahrung mit empfindlichen Bodenbelägen sowie mit der
+            Entfernung von hartnäckigen und tiefsitzenden Verschmutzungen.
+            Für mich ist es selbstverständlich, für jede Oberfläche die richtige
+            Reinigungsmethode zu wählen und Materialien sorgfältig zu behandeln.
+          </p>
+
+          <p>
+            Reinigung ist für mich nicht einfach nur Arbeit. Ich mache sie wirklich
+            gerne. Sauberkeit zu schaffen, sichtbare Veränderungen zu sehen und am
+            Ende ein schönes Ergebnis zu haben, gibt mir Zufriedenheit und hilft mir,
+            den Alltagsstress hinter mir zu lassen.
+          </p>
+
+          <p>
+            Die Idee, SORAE zu gründen, entstand auch durch die Ermutigung von
+            Freundinnen, Bekannten und Kundinnen, die mich immer wieder darin
+            bestärkt haben, meinen eigenen Weg zu gehen.
+          </p>
+
+          <p>
+            Als Mutter ist mir außerdem wichtig, meine berufliche Tätigkeit mit
+            meiner Familie vereinbaren zu können. Die Selbstständigkeit gibt mir
+            die Möglichkeit, meine Zeit verantwortungsvoller zu gestalten und
+            gleichzeitig für meine Tochter da zu sein.
+          </p>
+
+          <p>
+            So entstand der Wunsch, aus meiner Erfahrung und meiner Leidenschaft
+            etwas Eigenes aufzubauen: SORAE.
+          </p>
+
+          <p>
+            Mein Ziel ist es, SORAE Schritt für Schritt zu einem professionellen
+            und vertrauenswürdigen Reinigungsunternehmen aufzubauen, das für
+            Qualität, Zuverlässigkeit, Sorgfalt und persönliche Betreuung steht.
+          </p>
+
+          <p>
+            Heute arbeite ich persönlich mit viel Leidenschaft.
+            Morgen möchte ich ein starkes Unternehmen mit einem engagierten Team aufbauen.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- GALERIE -->
+
+    <section id="galerie" class="section">
+
+      <div class="container">
 
         <div class="section-title">
 
-            <h2>Über uns</h2>
+          <h2>Galerie</h2>
 
-            <p>
-                Unsere Geschichte
-            </p>
-
-        </div>
-
-
-        <div class="about-content">
-
-            <h3>
-                Mit Erfahrung, Ausbildung und echter Leidenschaft für Sauberkeit.
-            </h3>
-
-
-            <p>
-                Meine berufliche Erfahrung im Bereich Reinigung begann
-                in Portugal. Dort arbeitete ich sowohl in der professionellen
-                Reinigung als auch im Hotelgewerbe und durfte wertvolle
-                Erfahrungen in 5-Sterne-Hotels sammeln.
-            </p>
-
-
-            <p>
-                Während dieser Zeit konnte ich verschiedene fachliche
-                Schulungen absolvieren und umfangreiche Erfahrungen in der
-                professionellen Reinigung sammeln. Dabei habe ich gelernt,
-                wie wichtig gründliches, sorgfältiges und verantwortungsbewusstes
-                Arbeiten ist.
-            </p>
-
-
-            <p>
-                Ich habe auch Erfahrung mit
-                <strong>empfindlichen Bodenbelägen</strong> sowie mit der
-                Entfernung von
-                <strong>hartnäckigen und tiefsitzenden Verschmutzungen</strong>.
-                Für mich ist es selbstverständlich, für jede Oberfläche die
-                richtige Reinigungsmethode zu wählen und Materialien sorgfältig
-                zu behandeln.
-            </p>
-
-
-            <p>
-                <strong>
-                    Reinigung ist für mich nicht einfach nur Arbeit.
-                    Ich mache sie wirklich gerne.
-                </strong>
-                Sauberkeit zu schaffen, sichtbare Veränderungen zu sehen
-                und am Ende ein schönes Ergebnis zu haben, gibt mir
-                Zufriedenheit und hilft mir, den Alltagsstress hinter mir zu lassen.
-            </p>
-
-
-            <p>
-                Die Idee, SORAE zu gründen, entstand auch durch die Ermutigung
-                von Freundinnen, Bekannten und Kundinnen, die mich immer wieder
-                darin bestärkt haben, meinen eigenen Weg zu gehen.
-            </p>
-
-
-            <p>
-                Als Mutter ist mir außerdem wichtig, meine berufliche Tätigkeit
-                mit meiner Familie vereinbaren zu können. Die Selbstständigkeit
-                gibt mir die Möglichkeit, meine Zeit verantwortungsvoller zu
-                gestalten und gleichzeitig für meine Tochter da zu sein.
-            </p>
-
-
-            <p>
-                So entstand der Wunsch, aus meiner Erfahrung und meiner
-                Leidenschaft etwas Eigenes aufzubauen:
-                <strong>SORAE.</strong>
-            </p>
-
-
-            <p>
-                Mein Ziel ist es, SORAE Schritt für Schritt zu einem
-                <strong>professionellen und vertrauenswürdigen
-                Reinigungsunternehmen</strong> aufzubauen, das für Qualität,
-                Zuverlässigkeit, Sorgfalt und persönliche Betreuung steht.
-            </p>
-
-
-            <div class="about-highlight">
-
-                Heute arbeite ich persönlich mit viel Leidenschaft.
-                Morgen möchte ich ein starkes Unternehmen mit einem
-                engagierten Team aufbauen.
-
-            </div>
+          <p>
+            Ein Blick auf unsere Arbeit – Vorher und Nachher.
+          </p>
 
         </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     GALERIE
-========================= -->
-
-<section class="gallery" id="galerie">
-
-    <div class="section-inner">
-
-        <div class="section-title">
-
-            <h2>Galerie</h2>
-
-            <p>
-                Vorher → Nachher
-            </p>
-
-        </div>
-
 
         <p class="gallery-intro">
-
-            Ein Einblick in unsere Arbeit.
-            Weitere Projekte und Ergebnisse folgen.
-
+          Wir zeigen gerne die sichtbaren Ergebnisse unserer Arbeit.
+          Weitere Projekte und Fotos werden nach und nach ergänzt.
         </p>
 
 
-        <div class="gallery-job">
+        <div class="gallery-grid">
 
-            <h3>
-                WC-Reinigung
-            </h3>
 
+          <!-- WC 1 -->
+
+          <div class="gallery-card">
+
+            <h3>Reinigung – WC</h3>
 
             <div class="before-after">
 
+              <div class="photo-box">
 
-                <div class="photo-box">
+                <img
+                  src="Wc antes -1"
+                  alt="WC vor der Reinigung"
+                  loading="lazy"
+                >
 
-                    <img
-                        src="Wc antes -1"
-                        alt="WC-Reinigung vorher"
-                    >
-
-                    <div class="photo-label">
-                        Vorher
-                    </div>
-
+                <div class="photo-label">
+                  Vorher
                 </div>
 
+              </div>
 
-                <div class="photo-box">
+              <div class="photo-box">
 
-                    <img
-                        src="Wc depois -1"
-                        alt="WC-Reinigung nachher"
-                    >
+                <img
+                  src="Wc depois -1"
+                  alt="WC nach der Reinigung"
+                  loading="lazy"
+                >
 
-                    <div class="photo-label">
-                        Nachher
-                    </div>
-
+                <div class="photo-label">
+                  Nachher
                 </div>
 
-
-                <div class="photo-box">
-
-                    <img
-                        src="Wc antes -2"
-                        alt="WC-Reinigung vorher"
-                    >
-
-                    <div class="photo-label">
-                        Vorher
-                    </div>
-
-                </div>
-
-
-                <div class="photo-box">
-
-                    <img
-                        src="Wc depois -2"
-                        alt="WC-Reinigung nachher"
-                    >
-
-                    <div class="photo-label">
-                        Nachher
-                    </div>
-
-                </div>
+              </div>
 
             </div>
 
+          </div>
+
+
+          <!-- WC 2 -->
+
+          <div class="gallery-card">
+
+            <h3>Reinigung – WC</h3>
+
+            <div class="before-after">
+
+              <div class="photo-box">
+
+                <img
+                  src="Wc antes -2"
+                  alt="WC vor der Reinigung"
+                  loading="lazy"
+                >
+
+                <div class="photo-label">
+                  Vorher
+                </div>
+
+              </div>
+
+              <div class="photo-box">
+
+                <img
+                  src="Wc depois -2"
+                  alt="WC nach der Reinigung"
+                  loading="lazy"
+                >
+
+                <div class="photo-label">
+                  Nachher
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
         </div>
 
+      </div>
 
-        <p class="gallery-note">
+    </section>
 
-            Weitere Fotos und Videos unserer Arbeiten folgen bald.
 
+    <!-- KUNDENMEINUNGEN -->
+
+    <section id="bewertungen" class="section reviews-section">
+
+      <div class="container">
+
+        <div class="section-title">
+
+          <h2>Kundenmeinungen</h2>
+
+          <p>
+            Ihre Meinung ist uns wichtig.
+          </p>
+
+        </div>
+
+        <p class="review-intro">
+          Alle Rückmeldungen und Bewertungen unserer Kunden sind herzlich willkommen.
+          Jede Bewertung wird vor der Veröffentlichung geprüft.
         </p>
 
-    </div>
 
-</section>
+        <!-- PROOFPILE WIDGET -->
+
+        <div
+          data-testimonial-widget="fcd6529c-53d9-4748-9d0e-827f3c4907a3"
+          data-theme="light">
+        </div>
+
+        <script async src="https://proofpile.net/widget.js"></script>
 
 
-<!-- =========================
-     KUNDENMEINUNGEN
-========================= -->
+        <div class="review-button">
 
-<section class="reviews" id="meinungen">
+          <a
+            href="https://proofpile.net/collect/sorae"
+            target="_blank"
+            rel="noopener"
+            class="button button-primary">
+            Bewertung abgeben
+          </a>
 
-    <div class="section-inner">
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- KONTAKT -->
+
+    <section id="kontakt" class="section">
+
+      <div class="container">
 
         <div class="section-title">
 
-            <h2>Kundenmeinungen</h2>
+          <h2>Kontakt</h2>
 
-            <p>
-                Ihre Meinung ist uns wichtig.
-            </p>
-
-        </div>
-
-
-        <div class="reviews-box">
-
-            <p>
-                Alle Rückmeldungen und Bewertungen unserer Kunden
-                sind herzlich willkommen.
-            </p>
-
-            <p>
-                Ihre Zufriedenheit und Ihr Vertrauen bedeuten uns viel.
-            </p>
-
-        </div>
-
-    </div>
-
-</section>
-
-
-<!-- =========================
-     KONTAKT
-========================= -->
-
-<section class="contact" id="kontakt">
-
-    <div class="section-inner">
-
-        <div class="section-title">
-
-            <h2>Kontakt</h2>
-
-            <p>
-                Wir freuen uns auf Ihre Anfrage.
-            </p>
+          <p>
+            Wir freuen uns auf Ihre Anfrage.
+          </p>
 
         </div>
 
 
-        <div class="contact-box">
+        <div class="contact-layout">
 
-            <h3>
-                Sie benötigen eine Reinigung?
-            </h3>
+
+          <!-- CONTACT INFO -->
+
+          <div class="contact-info">
+
+            <h3>SORAE</h3>
 
             <p>
-                Kontaktieren Sie uns gerne.
-                Wir besprechen Ihre Wünsche persönlich
-                und erstellen ein individuelles Angebot.
+              Professionelle Reinigungsdienste mit Erfahrung,
+              Sorgfalt und persönlicher Betreuung.
             </p>
 
+            <p>
+              Haben Sie Fragen oder möchten Sie eine Reinigung anfragen?
+              Schreiben Sie uns gerne.
+            </p>
 
-            <a
+            <p>
+              <strong>E-Mail:</strong><br>
+
+              <a
                 href="mailto:info@sorae.at"
-                class="contact-email"
-            >
+                class="contact-email">
                 info@sorae.at
-            </a>
+              </a>
+            </p>
+
+          </div>
 
 
-            <br>
+          <!-- CONTACT FORM -->
+
+          <form
+            class="contact-form"
+            action="https://formsubmit.co/info@sorae.at"
+            method="POST">
+
+            <input
+              type="hidden"
+              name="_subject"
+              value="Neue Anfrage – SORAE">
+
+            <input
+              type="hidden"
+              name="_captcha"
+              value="false">
+
+            <input
+              type="hidden"
+              name="_template"
+              value="table">
 
 
-            <a
-                href="mailto:info@sorae.at"
-                class="hero-button"
-            >
-                Anfrage senden
-            </a>
+            <div class="form-group">
+
+              <label for="name">
+                Name *
+              </label>
+
+              <input
+                type="text"
+                id="name"
+                name="Name"
+                placeholder="Ihr Name"
+                required>
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="email">
+                E-Mail *
+              </label>
+
+              <input
+                type="email"
+                id="email"
+                name="E-Mail"
+                placeholder="Ihre E-Mail-Adresse"
+                required>
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="telefon">
+                Telefon
+              </label>
+
+              <input
+                type="tel"
+                id="telefon"
+                name="Telefon"
+                placeholder="Ihre Telefonnummer">
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="reinigung">
+                Welche Reinigung benötigen Sie? *
+              </label>
+
+              <select
+                id="reinigung"
+                name="Art der Reinigung"
+                required>
+
+                <option value="">
+                  Bitte auswählen
+                </option>
+
+                <option value="Privathaushalt">
+                  Privathaushalt
+                </option>
+
+                <option value="Büroreinigung">
+                  Büroreinigung
+                </option>
+
+                <option value="Grundreinigung">
+                  Grundreinigung
+                </option>
+
+                <option value="Spezielle Reinigung">
+                  Spezielle Reinigung
+                </option>
+
+                <option value="Andere Anfrage">
+                  Andere Anfrage
+                </option>
+
+              </select>
+
+            </div>
+
+
+            <div class="form-group">
+
+              <label for="message">
+                Ihre Nachricht *
+              </label>
+
+              <textarea
+                id="message"
+                name="Nachricht"
+                placeholder="Beschreiben Sie gerne Ihre Anfrage..."
+                required></textarea>
+
+            </div>
+
+
+            <label class="checkbox">
+
+              <input
+                type="checkbox"
+                name="Datenschutz"
+                value="Zustimmung"
+                required>
+
+              <span>
+                Ich stimme der Verarbeitung meiner Angaben zur
+                Bearbeitung meiner Anfrage zu.
+              </span>
+
+            </label>
+
+
+            <button
+              type="submit"
+              class="button button-primary submit-button">
+              Anfrage senden
+            </button>
+
+          </form>
 
         </div>
 
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <!-- FOOTER -->
+
+  <footer>
+
+    <div class="container">
+
+      <img src="Logo.png" alt="SORAE">
+
+      <p>
+        © 2026 SORAE – Professionelle Reinigungsdienste
+      </p>
+
+      <p>
+        Qualität · Zuverlässigkeit · Sorgfalt
+      </p>
+
+      <p>
+        Website im Aufbau – weitere Inhalte folgen.
+      </p>
+
     </div>
 
-</section>
+  </footer>
 
 
-<!-- =========================
-     WEBSITE IM AUFBAU
-========================= -->
-
-<section class="construction">
-
-    <h2>
-        🚧 Website im Aufbau
-    </h2>
-
-    <p>
-        Weitere Inhalte, Fotos und Videos folgen bald.
-    </p>
-
-</section>
-
-
-<!-- =========================
-     FOOTER
-========================= -->
-
-<footer>
-
-    <p>
-        <strong>SORAE – Dauerhafter Glanz.</strong>
-    </p>
-
-    <p class="footer-small">
-        © 2026 SORAE. Alle Rechte vorbehalten.
-    </p>
-
-</footer>
-
-<section id="bewertungen" class="section">
-  <div class="container">
-    <h2>Kundenmeinungen</h2>
-    <p class="section-intro">
-      Ihre Meinung ist uns wichtig. Alle Rückmeldungen und Bewertungen unserer Kunden sind herzlich willkommen.
-    </p>
-
-    <div data-testimonial-widget="fcd6529c-53d9-4748-9d0e-827f3c4907a3" data-theme="light"></div>
-    <script async src="https://proofpile.net/widget.js"></script>
-  </div>
-</section>
 </body>
 </html>
