@@ -1,308 +1,989 @@
 <!DOCTYPE html>
 <html lang="de">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Sorae | Professionelle Reinigungsdienste</title>
+<title>SORAE | Professionelle Reinigungsdienste</title>
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
+<meta name="description" content="Professionelle Reinigungsdienste in Vorarlberg, Österreich, Liechtenstein, der Schweiz und Deutschland.">
+
+<style>
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #172b40;
+    line-height: 1.6;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+    background: #ffffff;
+    border-bottom: 1px solid #e8eef3;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-inner {
+    max-width: 1200px;
+    margin: auto;
+    padding: 18px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+/* LOGO */
+
+.logo img {
+    display: block;
+    width: clamp(120px, 15vw, 175px);
+    max-width: 50vw;
+    height: auto;
+}
+
+/* MENU */
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+nav a {
+    color: #172b40;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 500;
+    transition: 0.25s;
+}
+
+nav a:hover {
+    color: #0878bd;
+}
+
+/* HEADER BUTTON */
+
+.header-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    background: #0878bd;
+    color: white;
+    text-decoration: none;
+    padding: 13px 22px;
+    border-radius: 30px;
+    font-weight: 600;
+    white-space: nowrap;
+    transition: 0.25s;
+}
+
+.header-button:hover {
+    background: #075f96;
+    transform: translateY(-1px);
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    background:
+        linear-gradient(
+            90deg,
+            #f5faff 0%,
+            #f9fcff 55%,
+            #eaf5fc 100%
+        );
+}
+
+.hero-inner {
+    max-width: 1200px;
+    min-height: 590px;
+    margin: auto;
+    padding: 75px 30px;
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    align-items: center;
+    gap: 60px;
+}
+
+.hero-text {
+    max-width: 600px;
+}
+
+.hero h1 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(42px, 5vw, 68px);
+    line-height: 1.05;
+    color: #102c49;
+    margin-bottom: 25px;
+}
+
+.hero-subtitle {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(22px, 2.4vw, 29px);
+    color: #1d3852;
+    margin-bottom: 22px;
+}
+
+.hero-description {
+    font-size: 18px;
+    color: #40566b;
+    max-width: 560px;
+    margin-bottom: 30px;
+}
+
+/* CONTACT AREA */
+
+.hero-contact {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.contact-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: #0878bd;
+    color: white;
+    text-decoration: none;
+    padding: 15px 26px;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: 0.25s;
+}
+
+.contact-button:hover {
+    background: #075f96;
+    transform: translateY(-2px);
+}
+
+.email {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #12699c;
+    font-size: 17px;
+    text-decoration: none;
+}
+
+/* HERO VISUAL */
+
+.hero-visual {
+    min-height: 420px;
+    border-radius: 28px;
+    background:
+        radial-gradient(circle at 30% 25%, #ffffff 0 8%, transparent 9%),
+        radial-gradient(circle at 70% 35%, #ffffff 0 5%, transparent 6%),
+        linear-gradient(145deg, #dff1fc, #f8fcff);
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 20px 50px rgba(20, 70, 100, 0.10);
+}
+
+.hero-visual::before {
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    background: rgba(255,255,255,0.7);
+    top: -80px;
+    right: -50px;
+}
+
+.hero-visual::after {
+    content: "✦";
+    position: absolute;
+    color: #0878bd;
+    font-size: 35px;
+    top: 65px;
+    left: 65px;
+}
+
+.clean-symbol {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.clean-symbol .circle {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    background: #ffffff;
+    box-shadow: 0 15px 40px rgba(30, 100, 140, 0.12);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 82px;
+}
+
+.clean-symbol p {
+    margin-top: 20px;
+    color: #176a99;
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 22px;
+}
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+section {
+    padding: 85px 30px;
+}
+
+.section-inner {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.section-title h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(34px, 4vw, 46px);
+    color: #102c49;
+}
+
+.section-line {
+    width: 55px;
+    height: 3px;
+    background: #0878bd;
+    margin: 18px auto 0;
+}
+
+/* =========================
+   SERVICES
+========================= */
+
+.services-section {
+    background: #ffffff;
+}
+
+.services {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.service {
+    text-align: center;
+    padding: 35px 22px;
+    border-radius: 18px;
+    background: #ffffff;
+    border: 1px solid #e4edf3;
+    transition: 0.25s;
+}
+
+.service:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(20, 80, 110, 0.10);
+}
+
+.service-icon {
+    width: 82px;
+    height: 82px;
+    margin: 0 auto 22px;
+    border-radius: 50%;
+    background: #e6f4fd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 38px;
+}
+
+.service h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 21px;
+    color: #102c49;
+    margin-bottom: 10px;
+}
+
+.service p {
+    color: #566a7c;
+    font-size: 16px;
+}
+
+/* =========================
+   ABOUT
+========================= */
+
+.about-section {
+    background: #f5faff;
+}
+
+.about {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+}
+
+.about p {
+    font-size: 18px;
+    color: #43586b;
+}
+
+/* =========================
+   GALLERY
+========================= */
+
+.gallery-section {
+    background: #ffffff;
+}
+
+.gallery-message {
+    max-width: 750px;
+    margin: auto;
+    text-align: center;
+    padding: 45px 25px;
+    border: 1px dashed #bdd9e9;
+    border-radius: 20px;
+    background: #f8fcff;
+}
+
+.gallery-message .icon {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.gallery-message h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 25px;
+    color: #102c49;
+    margin-bottom: 10px;
+}
+
+.gallery-message p {
+    color: #617384;
+}
+
+/* =========================
+   CUSTOMER REVIEWS
+========================= */
+
+.reviews-section {
+    background: #f5faff;
+}
+
+.review-box {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+    padding: 45px 30px;
+    background: white;
+    border-radius: 22px;
+    box-shadow: 0 10px 35px rgba(20, 70, 100, 0.07);
+}
+
+.stars {
+    color: #0878bd;
+    font-size: 28px;
+    letter-spacing: 4px;
+    margin-bottom: 18px;
+}
+
+.review-box h3 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 27px;
+    color: #102c49;
+    margin-bottom: 12px;
+}
+
+.review-box p {
+    color: #5c6f80;
+    font-size: 17px;
+}
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact-section {
+    background: #ffffff;
+}
+
+.contact-box {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+    background: linear-gradient(135deg, #e8f6fd, #f8fcff);
+    padding: 55px 30px;
+    border-radius: 25px;
+}
+
+.contact-box h2 {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(32px, 4vw, 44px);
+    color: #102c49;
+    margin-bottom: 15px;
+}
+
+.contact-box p {
+    color: #53697b;
+    font-size: 17px;
+    margin-bottom: 25px;
+}
+
+.contact-email {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #0878bd;
+    font-size: 20px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+/* =========================
+   UNDER CONSTRUCTION
+========================= */
+
+.construction {
+    text-align: center;
+    background: #eaf6fd;
+    padding: 28px 20px;
+    border-top: 1px solid #d7eaf5;
+}
+
+.construction strong {
+    color: #17577e;
+    font-size: 17px;
+}
+
+.construction p {
+    color: #63798a;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+    background: #102c49;
+    color: white;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+footer .footer-brand {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 23px;
+    margin-bottom: 8px;
+}
+
+footer p {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 950px) {
+
+    .header-inner {
+        flex-wrap: wrap;
+        justify-content: center;
     }
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f7f7f7;
-      color: #333;
-      line-height: 1.6;
+    nav {
+        order: 3;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
     }
 
-    header {
-      background: white;
-      text-align: center;
-      padding: 70px 20px 55px;
-      border-bottom: 1px solid #e5e5e5;
+    .hero-inner {
+        grid-template-columns: 1fr;
+        text-align: center;
     }
 
-    .logo {
-      font-size: 58px;
-      font-weight: 600;
-      letter-spacing: 4px;
-      color: #777;
-      margin-bottom: 12px;
+    .hero-text {
+        margin: auto;
     }
 
-    .tagline {
-      font-size: 21px;
-      color: #999;
-      letter-spacing: 1px;
+    .hero-description {
+        margin-left: auto;
+        margin-right: auto;
     }
 
-    .intro {
-      max-width: 850px;
-      margin: 45px auto 0;
-      padding: 0 20px;
-      text-align: center;
-      font-size: 18px;
-      color: #666;
+    .hero-contact {
+        justify-content: center;
     }
 
-    section {
-      max-width: 1100px;
-      margin: 35px auto;
-      padding: 45px 30px;
-      background: white;
-      border-radius: 18px;
-    }
-
-    h2 {
-      text-align: center;
-      font-size: 32px;
-      font-weight: 500;
-      color: #555;
-      margin-bottom: 35px;
+    .hero-visual {
+        max-width: 600px;
+        width: 100%;
+        margin: auto;
     }
 
     .services {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 600px) {
+
+    .header-inner {
+        padding: 15px 18px;
+        gap: 15px;
+    }
+
+    .logo img {
+        width: 130px;
+        max-width: 45vw;
+    }
+
+    nav {
+        gap: 17px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .header-button {
+        width: 100%;
+        justify-content: center;
+        padding: 11px 18px;
+    }
+
+    .hero-inner {
+        padding: 55px 20px;
+        gap: 35px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero-subtitle {
+        font-size: 22px;
+    }
+
+    .hero-description {
+        font-size: 16px;
+    }
+
+    .hero-contact {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .contact-button {
+        justify-content: center;
+    }
+
+    .email {
+        justify-content: center;
+        font-size: 15px;
+    }
+
+    .hero-visual {
+        min-height: 320px;
+    }
+
+    .clean-symbol .circle {
+        width: 140px;
+        height: 140px;
+        font-size: 62px;
+    }
+
+    section {
+        padding: 65px 18px;
+    }
+
+    .services {
+        grid-template-columns: 1fr;
     }
 
     .service {
-      padding: 28px 20px;
-      border: 1px solid #e6e6e6;
-      border-radius: 14px;
-      text-align: center;
-      background: #fafafa;
-      transition: 0.3s;
+        padding: 30px 20px;
     }
 
-    .service:hover {
-      transform: translateY(-4px);
-      box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+    .review-box,
+    .contact-box {
+        padding: 40px 22px;
     }
-
-    .service h3 {
-      color: #666;
-      font-size: 20px;
-      margin-bottom: 10px;
-      font-weight: 500;
-    }
-
-    .service p {
-      color: #888;
-      font-size: 15px;
-    }
-
-    .about {
-      text-align: center;
-      max-width: 800px;
-      margin: auto;
-      color: #666;
-      font-size: 17px;
-    }
-
-    .contact {
-      text-align: center;
-      background: #f1f1f1;
-    }
-
-    .contact p {
-      margin-bottom: 25px;
-      color: #666;
-      font-size: 17px;
-    }
-
-    .button {
-      display: inline-block;
-      padding: 14px 30px;
-      background: #666;
-      color: white;
-      text-decoration: none;
-      border-radius: 30px;
-      font-size: 16px;
-      transition: 0.3s;
-    }
-
-    .button:hover {
-      background: #444;
-    }
-
-    footer {
-      text-align: center;
-      padding: 35px 20px;
-      color: #999;
-      font-size: 14px;
-    }
-
-    @media (max-width: 800px) {
-      .services {
-        grid-template-columns: 1fr 1fr;
-      }
-
-      .logo {
-        font-size: 46px;
-      }
-    }
-
-    @media (max-width: 550px) {
-      .services {
-        grid-template-columns: 1fr;
-      }
-
-      header {
-        padding: 50px 20px;
-      }
-
-      .logo {
-        display: flex;
-justify-content: center;
-      }
-.logo img {width: 60px; 
-    height: auto;
 }
-      .tagline {
-        font-size: 17px;
-      }
 
-      section {
-        margin: 20px 12px;
-        padding: 35px 20px;
-      }
-    }
-  </style>
+</style>
 </head>
 
 <body>
 
-  <header>
-   <div class="logo">
-  <img src="Logo.png" alt="SORAE">
-</div>
+<!-- =========================
+     HEADER
+========================= -->
 
-    <div class="tagline">
-      Professionelle Reinigungsdienste
-    </div>
+<header>
 
-    <div class="intro">
-     Sauberkeit mit Anspruch – zuverlässig, gründlich und persönlich.
-Professionelle Reinigungsdienste in Vorarlberg, Österreich, Liechtenstein, der Schweiz und Deutschland.
-    </div>
-  </header>
+    <div class="header-inner">
 
+        <a href="#home" class="logo">
+            <img src="Logo.png" alt="SORAE – Dauerhafter Glanz">
+        </a>
 
-  <section>
-    <h2>Unsere Dienstleistungen</h2>
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#dienstleistungen">Dienstleistungen</a>
+            <a href="#ueber-uns">Über uns</a>
+            <a href="#galerie">Galerie</a>
+            <a href="#meinungen">Kundenmeinungen</a>
+            <a href="#kontakt">Kontakt</a>
+        </nav>
 
-    <div class="services">
-
-      <div class="service">
-        <h3>Privathaushalte</h3>
-        <p>
-          Gründliche und zuverlässige Reinigung für Ihr Zuhause.
-        </p>
-      </div>
-
-      <div class="service">
-        <h3>Wohnungen</h3>
-        <p>
-          Regelmäßige oder einmalige Reinigung für Wohnungen und Apartments.
-        </p>
-      </div>
-
-      <div class="service">
-        <h3>Büroreinigung</h3>
-        <p>
-          Saubere und angenehme Arbeitsbereiche für Unternehmen.
-        </p>
-      </div>
-
-      <div class="service">
-        <h3>Grundreinigung</h3>
-        <p>
-          Intensive Reinigung für besonders gründliche Ergebnisse.
-        </p>
-      </div>
-
-      <div class="service">
-        <h3>Fensterreinigung</h3>
-        <p>
-          Saubere Fenster und klare Sicht bis ins kleinste Detail.
-        </p>
-      </div>
-
-      <div class="service">
-        <h3>Bügelservice</h3>
-        <p>
-          Sorgfältiges Bügeln und gepflegte Kleidung.
-        </p>
-      </div>
-
-      <div class="service">
-        <h3>Bettwäsche</h3>
-        <p>
-          Wechseln und sorgfältiges Vorbereiten der Bettwäsche.
-        </p>
-      </div>
-
-      <div class="service">
-        <h3>Individuelle Reinigung</h3>
-        <p>
-          Reinigungslösungen, die individuell an Ihre Bedürfnisse angepasst werden.
-        </p>
-      </div>
-
-      <div class="service">
-        <h3>Qualität & Zuverlässigkeit</h3>
-        <p>
-          Persönlicher Service, sorgfältige Arbeit und zuverlässige Termine.
-        </p>
-      </div>
+        <a href="#kontakt" class="header-button">
+            ✉ Kontakt aufnehmen
+        </a>
 
     </div>
-  </section>
+
+</header>
 
 
-  <section>
-    <h2>Über Sorae</h2>
+<!-- =========================
+     HERO
+========================= -->
 
-    <div class="about">
-      <p>
-        Sorae steht für professionelle Reinigung mit persönlicher Betreuung.
-        Wir legen großen Wert auf Sauberkeit, Zuverlässigkeit und sorgfältige Arbeit.
-      </p>
+<main id="home">
 
-      <br>
+<section class="hero">
 
-      <p>
-        Unser Ziel ist es, Ihnen Zeit und Arbeit abzunehmen,
-        damit Sie sich in einer sauberen und gepflegten Umgebung wohlfühlen können.
-      </p>
+    <div class="hero-inner">
+
+        <div class="hero-text">
+
+            <h1>
+                Professionelle<br>
+                Reinigungsdienste
+            </h1>
+
+            <div class="hero-subtitle">
+                Sauberkeit mit Anspruch – zuverlässig,
+                gründlich und persönlich.
+            </div>
+
+            <p class="hero-description">
+                Professionelle Reinigungsdienste in
+                Vorarlberg, Österreich, Liechtenstein,
+                der Schweiz und Deutschland.
+            </p>
+
+            <div class="hero-contact">
+
+                <a href="#kontakt" class="contact-button">
+                    ✉ Kontakt aufnehmen
+                </a>
+
+                <a href="mailto:info@sorae.at" class="email">
+                    ✉ info@sorae.at
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-visual">
+
+            <div class="clean-symbol">
+                <div class="circle">✨</div>
+                <p>Sauberkeit mit Anspruch</p>
+            </div>
+
+        </div>
+
     </div>
-  </section>
+
+</section>
 
 
-  <section class="contact">
-    <h2>Kontakt</h2>
+<!-- =========================
+     SERVICES
+========================= -->
+
+<section id="dienstleistungen" class="services-section">
+
+    <div class="section-inner">
+
+        <div class="section-title">
+
+            <h2>Unsere Dienstleistungen</h2>
+
+            <div class="section-line"></div>
+
+        </div>
+
+
+        <div class="services">
+
+            <div class="service">
+
+                <div class="service-icon">⌂</div>
+
+                <h3>Privathaushalte</h3>
+
+                <p>
+                    Saubere Wohnungen und Häuser
+                    mit persönlicher Betreuung.
+                </p>
+
+            </div>
+
+
+            <div class="service">
+
+                <div class="service-icon">▦</div>
+
+                <h3>Büroreinigung</h3>
+
+                <p>
+                    Gepflegte Arbeitsplätze für
+                    ein angenehmes Arbeitsumfeld.
+                </p>
+
+            </div>
+
+
+            <div class="service">
+
+                <div class="service-icon">⌕</div>
+
+                <h3>Hausverwaltung</h3>
+
+                <p>
+                    Zuverlässige Betreuung und
+                    professionelle Reinigung.
+                </p>
+
+            </div>
+
+
+            <div class="service">
+
+                <div class="service-icon">✦</div>
+
+                <h3>Spezialreinigung</h3>
+
+                <p>
+                    Individuelle Lösungen nach
+                    Ihren persönlichen Bedürfnissen.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section id="ueber-uns" class="about-section">
+
+    <div class="section-inner">
+
+        <div class="section-title">
+
+            <h2>Über uns</h2>
+
+            <div class="section-line"></div>
+
+        </div>
+
+        <div class="about">
+
+            <p>
+                SORAE steht für zuverlässige,
+                gründliche und persönliche
+                Reinigungsdienstleistungen.
+                Unser Anspruch ist es, für
+                dauerhaften Glanz und ein
+                gepflegtes Umfeld zu sorgen.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     GALLERY
+========================= -->
+
+<section id="galerie" class="gallery-section">
+
+    <div class="section-inner">
+
+        <div class="section-title">
+
+            <h2>Unsere Arbeiten</h2>
+
+            <div class="section-line"></div>
+
+        </div>
+
+        <div class="gallery-message">
+
+            <div class="icon">📷</div>
+
+            <h3>Galerie im Aufbau</h3>
+
+            <p>
+                Hier zeigen wir bald Fotos und
+                Videos von unseren Reinigungsarbeiten.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CUSTOMER REVIEWS
+========================= -->
+
+<section id="meinungen" class="reviews-section">
+
+    <div class="section-inner">
+
+        <div class="section-title">
+
+            <h2>Kundenmeinungen</h2>
+
+            <div class="section-line"></div>
+
+        </div>
+
+        <div class="review-box">
+
+            <div class="stars">★★★★★</div>
+
+            <h3>Ihre Meinung ist uns wichtig</h3>
+
+            <p>
+                Alle Rückmeldungen und Bewertungen
+                unserer Kunden sind willkommen.
+                Dieser Bereich wird nach und nach
+                mit echten Kundenmeinungen ergänzt.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section id="kontakt" class="contact-section">
+
+    <div class="section-inner">
+
+        <div class="contact-box">
+
+            <h2>Kontakt aufnehmen</h2>
+
+            <p>
+                Sie möchten mehr über unsere
+                Dienstleistungen erfahren?
+                Wir freuen uns auf Ihre Nachricht.
+            </p>
+
+            <a
+                href="mailto:info@sorae.at"
+                class="contact-email"
+            >
+                ✉ info@sorae.at
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SITE UNDER CONSTRUCTION
+========================= -->
+
+<div class="construction">
+
+    <strong>
+        🚧 Website im Aufbau
+    </strong>
 
     <p>
-      Sie suchen eine zuverlässige Reinigungskraft?
-      Wir freuen uns auf Ihre Anfrage.
+        Weitere Inhalte, Fotos und Videos folgen bald.
     </p>
 
-    <a class="button" href="mailto:info@sorae.at">
-      Kontakt aufnehmen
-    </a>
-  </section>
+</div>
 
 
-  <footer>
-    © 2026 Sorae – Professionelle Reinigungsdienste
-  </footer>
+</main>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+    <div class="footer-brand">
+        SORAE – Dauerhafter Glanz.
+    </div>
+
+    <p>
+        © 2026 SORAE – Professionelle Reinigungsdienste
+    </p>
+
+</footer>
 
 </body>
 </html>
